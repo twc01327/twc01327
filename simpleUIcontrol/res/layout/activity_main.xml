@@ -8,33 +8,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:ems="10" android:inputType="">
-
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:text="@string/submit" />
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/hello_world" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_toLeftOf="@+id/button1"
-        android:onClick="submit2"
-        android:text="@string/submit2" />
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="72dp"
+        android:onClick="moveRight"
+        android:text="right" />
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_right"
+        android:layout_alignBottom="@+id/btn_right"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="28dp"
+        android:onClick="moveLeft"
+        android:text="left" />
 
 </RelativeLayout>
